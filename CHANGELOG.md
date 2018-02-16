@@ -1,3 +1,10 @@
+## 1.4.0
+
+**Implemented enhancements:**
+
+* Support multifolder workspaces
+* Stability improvements - update dependencies
+
 ## 1.3.1
 
 **Bug fixes:**
