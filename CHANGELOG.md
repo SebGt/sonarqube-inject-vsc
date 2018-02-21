@@ -1,3 +1,9 @@
+## 2.0.0
+
+**Implemented enhancements:**
+
+* Support SonarQube 6.7+
+
 ## 1.4.0
 
 **Implemented enhancements:**
