@@ -7,13 +7,6 @@
 SonarQube support for Visual Studio Code that provides on-the-fly feedback to developers on new bugs and quality issues injected into their code.  
 Non-official realization of SonarLint for VS Code.
 
-## Important
-
-`sonarlint` utility will be downloaded (~30MB) on first-time activation of the extension.  
-If you are working behind a proxy, consider set `http_proxy` or `https_proxy` env variables and/or `http.proxy` and `http.proxyStrictSSL` settings in your Visual Studio Code.
-
-If the `SonarQube` commands dont show up in your VS Code after installing the extensions, try restarting your IDE. 
-
 ## TLDR: Quick Setup for Standalone mode
 
 * Just open your project dir
