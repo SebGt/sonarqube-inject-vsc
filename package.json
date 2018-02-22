@@ -73,7 +73,7 @@
           "default": true
         },
         "sonarqube-inject.sonarlintPath": {
-          "description": "Full path to sonarlint binary. Fill this only if sonarlint is not in your $PATH",
+          "description": "Full path to sonarlint binary. Fill this only if distributed sonarlint-cli doesn't work properly.",
           "type": "string",
           "default": ""
         },
