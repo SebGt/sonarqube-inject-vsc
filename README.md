@@ -96,8 +96,27 @@ You can run analysis with connection to your SonarQube server.
 To do this you need to create two small config files.  
 Create and edit first file - global config - via `SonarQube Inject: Create global config with credentials to servers` command.  
 Create and edit second file - procjet config - via `SonarQube Inject: Create local sonarlint config with project binding` command.  
-If you have any troubles or questions please follow the instructions on [SonarLint website](http://www.sonarlint.org/commandline/index.html), section `Connected mode`, or start discussion in [Issues page](https://github.com/silverbulleters/sonarqube-inject-vsc/issues) or [Gitter](https://gitter.im/silverbulleters/sonarqube-inject-vsc).  
+If you have any troubles or questions please start discussion in [Issues page](https://github.com/silverbulleters/sonarqube-inject-vsc/issues) or [Gitter](https://gitter.im/silverbulleters/sonarqube-inject-vsc).  
 Don't forget to run `SonarQube Inject: Update bindings to SonarQube server` command in VSC or `sonarlint -u` in command line at your project workspace to update server bindings.
+
+### SonarQube server with enabled Organization mode (eg. SonarCloud.io)
+
+To analyze projects on SonarQube servers with Organizations you need to add `organizationKey` property in your `global.json` configuration file.
+
+```json
+{
+    "servers": [
+        {
+            "id": "localhost",
+            "url": "http://localhost:9000",
+            "token": "c8ecbc03f615ddbc1d97ad478ee024b45b6784c1",
+            "organizationKey": "my-organization-key"
+        }
+    ]
+}
+```
+
+You need to add new entry to `servers` array for every organization you want to add.
 
 ## Limitations
 
