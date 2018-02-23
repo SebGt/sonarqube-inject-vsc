@@ -10,13 +10,9 @@ import GlobalTemplate from "./templates/globalTemplate";
 import { IConfigTemplate } from "./templates/IConfigTemplate";
 import SonarlintTemplate from "./templates/sonarlintTemplate";
 
-const pathToExtract = path.join(__filename, "./../../../tools");
-const pathToDownload = path.join(pathToExtract, "sonarlint-cli.zip");
-
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 export async function activate(context: vscode.ExtensionContext) {
-
     addSubscriptions(context);
 }
 

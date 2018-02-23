@@ -4,7 +4,7 @@
     "properties": {
         "serverId": {
             "type": "string",
-            "description": "Unique ID of SonarQube connection"
+            "description": "Unique ID of SonarQube connection from global.json"
         },
         "projectKey": {
             "type": "string",

@@ -3,6 +3,7 @@ import { IConfigTemplate } from "./IConfigTemplate";
 export default class GlobalTemplate implements IConfigTemplate {
     public getTemplateObject(): object {
         return {
+            $schema: "https://raw.githubusercontent.com/silverbulleters/sonarqube-inject-vsc/master/schemas/global.json",
             servers: [
                 {
                     id: "localhost",

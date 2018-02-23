@@ -222,10 +222,12 @@ export default class LintProvider {
     }
 
     private getRootPath(textDocument?: vscode.TextDocument): string {
-        let rootPath;
+        let rootPath: string = "";
         if (textDocument) {
             const activeWorkspacefolder = vscode.workspace.getWorkspaceFolder(textDocument.uri);
-            rootPath = activeWorkspacefolder && activeWorkspacefolder.uri.fsPath;
+            if (activeWorkspacefolder) {
+                rootPath = activeWorkspacefolder.uri.fsPath;
+            }
         }
 
         return rootPath;

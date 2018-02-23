@@ -3,7 +3,7 @@
   "displayName": "SonarQube support for Visual Studio Code",
   "description": "SonarQube support for Visual Studio Code that provides on-the-fly feedback to developers on new bugs and quality issues injected into their code.",
   "icon": "images/SBIcon.png",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "publisher": "silverbulleters",
   "license": "SEE LICENSE IN LICENSE.md",
   "bugs": {
@@ -73,7 +73,7 @@
           "default": true
         },
         "sonarqube-inject.sonarlintPath": {
-          "description": "Full path to sonarlint binary. Fill this only if sonarlint is not in your $PATH",
+          "description": "Full path to sonarlint binary. Fill this only if distributed sonarlint-cli doesn't work properly.",
           "type": "string",
           "default": ""
         },
@@ -116,15 +116,15 @@
     "@types/iconv-lite": "^0.0.1",
     "@types/node": "^9.4.6",
     "@types/request": "^2.47.0",
+    "extract-zip": "^1.6.6",
+    "request": "^2.83.0",
     "tslint": "^5.9.1",
     "typescript": "^2.7.2",
     "vscode": "^1.1.10"
   },
   "dependencies": {
     "cross-spawn": "^6.0.4",
-    "extract-zip": "^1.6.6",
     "fs-extra": "^5.0.0",
-    "iconv-lite": "^0.4.19",
-    "request": "^2.83.0"
+    "iconv-lite": "^0.4.19"
   }
 }
