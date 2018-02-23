@@ -21,13 +21,40 @@ Non-official realization of SonarLint for VS Code.
 
 ## Connected mode
 
-You can run analysis with connection to your SonarQube server.
+You can run analysis with connection to your SonarQube server. To do this you need to create two small config files.
 
-To do this you need to create two small config files.  
-Create and edit first file - global config - via `SonarQube Inject: Create global config with credentials to servers` command.  
-Create and edit second file - procjet config - via `SonarQube Inject: Create local sonarlint config with project binding` command.  
-If you have any troubles or questions please start discussion in [Issues page](https://github.com/silverbulleters/sonarqube-inject-vsc/issues) or [Gitter](https://gitter.im/silverbulleters/sonarqube-inject-vsc).  
-Don't forget to run `SonarQube Inject: Update bindings to SonarQube server` command in VSC or `sonarlint -u` in command line at your project workspace to update server bindings.
+Create and edit first file - global config - via `SonarQube Inject: Create global config with credentials to servers` command. In this file you need to define your SonarQube servers - `id`'s, `url`, credentials (auth `token` or `login` and `password` pair) and `organizationKey`, if your SonarQube server has enabled Organization mode.
+
+Example:
+
+```json
+{
+  "$schema": "https://gist.github.com/nixel2007/18b4e86ef1d98fb60b901ca4fcecb0e9/raw/bca2e6d461143f11aabe825deb596755893efbf9/global.json",
+  "servers": [
+    {
+      "id": "localhost",
+      "url": "http://localhost:9000",
+      "token": "fe299234962a304f63386db4ffa0cbdb22367b52"
+    }
+  ]
+}
+```
+
+Create and edit second file - project config - via `SonarQube Inject: Create local sonarlint config with project binding` command. In this file you need to define the `serverId` (`id` from `global.json` file) and `projectKey` - key of project at your SonarQube server.
+
+Example:
+
+```json
+{
+    "$schema": "https://raw.githubusercontent.com/silverbulleters/sonarqube-inject-vsc/master/schemas/sonarlint.json",
+    "serverId": "localhost",
+    "projectKey": "my-project"
+}
+```
+
+Don't forget to run `SonarQube Inject: Update bindings to SonarQube server` command in VSCode to update server bindings.
+
+If you have any troubles or questions please start discussion in [Issues page](https://github.com/silverbulleters/sonarqube-inject-vsc/issues) or [Gitter](https://gitter.im/silverbulleters/sonarqube-inject-vsc).
 
 ### SonarQube server with enabled Organization mode (eg. SonarCloud.io)
 
